@@ -17,7 +17,7 @@ def _paa(X, n_samples, n_timestamps, start, end, n_timestamps_new):
     X_paa = np.empty((n_samples, n_timestamps_new))
     for i in prange(n_samples):
         for j in prange(n_timestamps_new):
-            X_paa[i, j] = np.nanmean(X[i, start[j]:end[j]])
+            X_paa[i, j] = np.mean(X[i, start[j]:end[j]])
     return X_paa
 
 
