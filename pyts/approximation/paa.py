@@ -100,7 +100,7 @@ class PiecewiseAggregateApproximation(BaseEstimator,
 
         """
         X = check_array(X,
-                       force_all_finite = 'allow-nan')
+                        force_all_finite = 'allow-nan')
         n_samples, n_timestamps = X.shape
 
         window_size, output_size = self._check_params(n_timestamps)
